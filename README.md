@@ -1,3 +1,8 @@
+# for developers
+- launch pull request before push
+- use dev branch for development
+- respect each other
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
