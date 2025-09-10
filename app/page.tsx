@@ -14,6 +14,8 @@ export default function Home() {
             defaultZoom={17}
             gestureHandling={"greedy"}
             disableDefaultUI={true}
+            mapId={process.env.NEXT_PUBLIC_MAP_ID || ""}
+
           />
         </APIProvider>
       </main>
