@@ -1,5 +1,5 @@
 # for developers
-- launch pull request before push
+- launch pull request before push (even push dev)
 - use dev branch for development
 - respect each other
 
