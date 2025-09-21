@@ -1,7 +1,12 @@
 "use client";
 import { useState } from "react";
 import styles from "./page.module.css";
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+import {
+  APIProvider,
+  Map,
+  Marker,
+  InfoWindow,
+} from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
 
 export default function Home() {
