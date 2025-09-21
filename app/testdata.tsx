@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import Place from "./page.tsx";
+import Place from "./data";
 
 const generateRandomPosition = (
   centerLat: number,

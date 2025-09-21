@@ -1,4 +1,4 @@
-import places from "./testdata.tsx";
+import places from "./testdata";
 
 export type Place = {
   id: number;
