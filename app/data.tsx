@@ -4,7 +4,7 @@ export type Place = {
   id: number;
   position: { lat: number; lng: number };
   title: string;
-  descriction: string;
+  description: string;
 };
 
 export default places;
