@@ -11,6 +11,9 @@
 #
 name: "CodeQL Advanced"
 
+env:
+  CODEQL_RAM: 2048  # Use a positive number, e.g., 2048 for 2GB
+
 on:
   push:
     branches: [ "main" ]
