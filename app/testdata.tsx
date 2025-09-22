@@ -1,44 +1,29 @@
 import crypto from "crypto";
-import { Place } from "./data";
+
+type Place = {
+  id: number;
+  position: { lat: number; lng: number };
+  title: string;
+  description: string;
+};
 
 const generateRandomPosition = (
   centerLat: number,
   centerLng: number,
-  radiusMeters: number,
+  radiusMeters: number
 ): { lat: number; lng: number } => {
-  const EARTH_RADIUS_METERS = 6378137;
-  const latRadian = (centerLat * Math.PI) / 180;
-  const lngRadian = (centerLng * Math.PI) / 180;
+  const ONE_LAT_DEGREE_IN_METERS = 111132.954;
+  const ONE_LNG_DEGREE_IN_METERS =
+    40075016.686 * Math.cos((centerLat * Math.PI) / 180) / 360;
 
-  const y = (radiusMeters / EARTH_RADIUS_METERS) * Math.sin(latRadian);
-  const x =
-    (radiusMeters / EARTH_RADIUS_METERS) *
-    Math.cos(latRadian) *
-    Math.cos(lngRadian);
-  const z =
-    (radiusMeters / EARTH_RADIUS_METERS) *
-    Math.cos(latRadian) *
-    Math.sin(lngRadian);
+  const randomRadius = Math.random() * radiusMeters;
+  const randomAngle = Math.random() * 2 * Math.PI;
 
-  const u = Math.random();
-  const v = Math.random();
+  const dx = randomRadius * Math.cos(randomAngle);
+  const dy = randomRadius * Math.sin(randomAngle);
 
-  const theta = 2 * Math.PI * u;
-  const phi = Math.acos(2 * v - 1);
-
-  const dx = Math.sin(phi) * Math.cos(theta);
-  const dy = Math.sin(phi) * Math.sin(theta);
-  const dz = Math.cos(phi);
-
-  const newX = x + dx;
-  const newY = y + dy;
-  const newZ = z + dz;
-
-  const newLng = (Math.atan2(newZ, newX) * 180) / Math.PI;
-  const newLat =
-    (Math.asin(newY / Math.sqrt(newX * newX + newY * newY + newZ * newZ)) *
-      180) /
-    Math.PI;
+  const newLat = centerLat + dy / ONE_LAT_DEGREE_IN_METERS;
+  const newLng = centerLng + dx / ONE_LNG_DEGREE_IN_METERS;
 
   return { lat: newLat, lng: newLng };
 };
@@ -72,4 +57,4 @@ const generateRandomPlaces = (count: number): Place[] => {
   return places;
 };
 
-export default generateRandomPlaces(5);
+export default  generateRandomPlaces(5);

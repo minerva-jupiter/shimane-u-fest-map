@@ -19,6 +19,8 @@ export default function Home() {
   const handleCloseClick = () => {
     setSelectedPlace(null);
   };
+
+  console.log(places);
   return (
     <div>
       <main>
