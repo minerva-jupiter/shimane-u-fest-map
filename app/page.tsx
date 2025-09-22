@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import styles from "./page.module.css";
 import {
   APIProvider,
   Map,
@@ -8,16 +7,13 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
+import styles from "./page.module.css";
 
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
   const handleMarkerClick = (place: Place) => {
     setSelectedPlace(place);
-  };
-
-  const handleCloseClick = () => {
-    setSelectedPlace(null);
   };
 
   console.log(places);
@@ -42,10 +38,11 @@ export default function Home() {
             {selectedPlace && (
               <InfoWindow
                 position={selectedPlace.position}
-                onCloseClick={handleCloseClick}
+                onCloseClick={() => setSelectedPlace(null)}
               >
-                <h3>{selectedPlace.title}</h3>
-                <p>{selectedPlace.description}</p>
+                <div className={styles.infoWindowContent}>
+                  + <h3>{selectedPlace.title}</h3>+ {selectedPlace.description}+{" "}
+                </div>
               </InfoWindow>
             )}
           </Map>
