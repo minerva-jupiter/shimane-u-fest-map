@@ -1,11 +1,5 @@
 import React from "react";
-
-type Place = {
-  id: number;
-  position: { lat: number; lng: number };
-  title: string;
-  description: React.ReactNode;
-};
+import type { Place } from "./data";
 
 const generateRandomPosition = (
   centerLat: number,
