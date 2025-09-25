@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   APIProvider,
   Map,
@@ -11,11 +12,22 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const id = searchParams.get("id");
+    if (id) {
+      const placeId = parseInt(id, 10);
+      const place = places.find((p) => p.id === placeId);
+      if (place) {
+        setSelectedPlace(place);
+      }
+    }
+  }, [searchParams]);
 
   const handleMarkerClick = (place: Place) => {
     setSelectedPlace(place);
   };
-
   console.log(places);
   return (
     <div>
