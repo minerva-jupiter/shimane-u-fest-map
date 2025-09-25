@@ -1,6 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import {
   APIProvider,
   Map,
@@ -9,25 +8,37 @@ import {
 } from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
 import styles from "./page.module.css";
+//import { useSearchParams } from "next/navigation";
+import { connection } from "next/server";
+
+/*
+const findPlaceById = (id: number): Place | undefined => {
+  return places.find((place) => place.id === id);
+};
+*/
 
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+  /*
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const id = searchParams.get("id");
-    if (id) {
-      const placeId = parseInt(id, 10);
-      const place = places.find((p) => p.id === placeId);
-      if (place) {
-        setSelectedPlace(place);
-      }
-    }
-  }, [searchParams]);
-
+  const search = searchParams.get("id");
+  */
   const handleMarkerClick = (place: Place) => {
     setSelectedPlace(place);
   };
+  /*
+  useEffect(() => {
+    if (search !== null) {
+      const searchNum = Number(search);
+      if (!isNaN(searchNum)) {
+        const foundPlace = findPlaceById(searchNum);
+        if (foundPlace) {
+          setSelectedPlace(foundPlace);
+        }
+      }
+    }
+  }, [search]);
+	*/
   console.log(places);
   return (
     <div>
