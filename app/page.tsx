@@ -1,9 +1,22 @@
 "use client";
-import Image from "next/image";
+import { useState } from "react";
+import {
+  APIProvider,
+  Map,
+  Marker,
+  InfoWindow,
+} from "@vis.gl/react-google-maps";
+import places, { Place } from "./data";
 import styles from "./page.module.css";
-import { APIProvider, Map } from "@vis.gl/react-google-maps";
 
 export default function Home() {
+  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+
+  const handleMarkerClick = (place: Place) => {
+    setSelectedPlace(place);
+  };
+
+  console.log(places);
   return (
     <div>
       <main>
@@ -14,8 +27,25 @@ export default function Home() {
             defaultZoom={17}
             gestureHandling={"greedy"}
             disableDefaultUI={true}
-            mapId={process.env.NEXT_PUBLIC_MAP_ID || ""}
-          />
+          >
+            {places.map((place) => (
+              <Marker
+                key={place.id}
+                position={place.position}
+                onClick={() => handleMarkerClick(place)}
+              />
+            ))}
+            {selectedPlace && (
+              <InfoWindow
+                position={selectedPlace.position}
+                onCloseClick={() => setSelectedPlace(null)}
+              >
+                <div className={styles.infoWindowContent}>
+                  + <h3>{selectedPlace.title}</h3>+ {selectedPlace.description}+{" "}
+                </div>
+              </InfoWindow>
+            )}
+          </Map>
         </APIProvider>
       </main>
       <footer>
