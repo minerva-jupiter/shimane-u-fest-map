@@ -35,11 +35,18 @@ const generateRandomPlaces = (count: number): Place[] => {
   const titles = ["地点A", "地点B", "地点C", "地点D", "地点E"];
 
   const timetables = [
+    { time: "10:00 - 14:00", event: "オープニングセレモニー" },
+    { time: "11:30", event: "地元グルメフェスティバル" },
+    { time: "14:00", event: "和太鼓パフォーマンス" },
+    { time: "16:00", event: "スペシャルゲストライブ" },
+    { time: "18:00", event: "花火大会" },
+    { time: "19:30", event: "クロージングセレモニー" },
     { time: "10:00", event: "オープニングセレモニー" },
     { time: "11:30", event: "地元グルメフェスティバル" },
     { time: "14:00", event: "和太鼓パフォーマンス" },
     { time: "16:00", event: "スペシャルゲストライブ" },
     { time: "18:00", event: "花火大会" },
+    { time: "19:30", event: "クロージングセレモニー" },
   ];
 
   const places: Place[] = Array.from({ length: count }).map((_, index) => {
@@ -47,49 +54,20 @@ const generateRandomPlaces = (count: number): Place[] => {
     const title = titles[index % titles.length];
 
     const description = (
-      <div style={{ maxWidth: "400px" }}>
-        <h3>イベントタイムテーブル</h3>
-        <table
-          style={{
-            width: "100%",
-            borderCollapse: "collapse",
-            fontSize: "14px",
-          }}
-        >
+      <div className="table-container">
+        <h3>{title}</h3>
+        <table>
           <thead>
-            <tr style={{ backgroundColor: "#f2f2f2" }}>
-              <th
-                style={{
-                  padding: "8px",
-                  border: "1px solid #ddd",
-                  textAlign: "left",
-                }}
-              >
-                時間
-              </th>
-              <th
-                style={{
-                  padding: "8px",
-                  border: "1px solid #ddd",
-                  textAlign: "left",
-                }}
-              >
-                内容
-              </th>
+            <tr>
+              <th>時間</th>
+              <th>内容</th>
             </tr>
           </thead>
           <tbody>
             {timetables.map((item, i) => (
-              <tr
-                key={i}
-                style={{ backgroundColor: i % 2 === 0 ? "#fafafa" : "#fff" }}
-              >
-                <td style={{ padding: "8px", border: "1px solid #ddd" }}>
-                  {item.time}
-                </td>
-                <td style={{ padding: "8px", border: "1px solid #ddd" }}>
-                  {item.event}
-                </td>
+              <tr key={i}>
+                <td>{item.time}</td>
+                <td>{item.event}</td>
               </tr>
             ))}
           </tbody>

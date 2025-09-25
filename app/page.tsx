@@ -20,9 +20,12 @@ export default function Home() {
   return (
     <div>
       <main>
+        <header>
+          <p>SITE TITLE</p>
+        </header>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
-            style={{ width: "100vw", height: "95vh" }}
+            style={{ width: "100vw", height: "calc(100vh - 80px)" }}
             defaultCenter={{ lat: 35.486404, lng: 133.06863 }}
             defaultZoom={17}
             gestureHandling={"greedy"}
@@ -35,27 +38,16 @@ export default function Home() {
                 onClick={() => handleMarkerClick(place)}
               />
             ))}
-            {selectedPlace && (
-              <InfoWindow
-                position={selectedPlace.position}
-                onCloseClick={() => setSelectedPlace(null)}
-              >
-                <div className={styles.infoWindowContent}>
-                  + <h3>{selectedPlace.title}</h3>+ {selectedPlace.description}+{" "}
-                </div>
-              </InfoWindow>
-            )}
           </Map>
+          {selectedPlace && (
+            <div className="table-container">
+              {selectedPlace.description}
+            </div>
+          )}
         </APIProvider>
       </main>
       <footer>
-        <p>@all right reserved by minerva_juppiter</p>
-        <style jsx>{`
-        p {
-          text-align: center;
-          color: white;
-        }
-      `}</style>
+        <small>&copy; 2025 minerva_juppiter All Right Reserved</small>
       </footer>
     </div>
   );
