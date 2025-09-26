@@ -44,7 +44,7 @@ export default function Home() {
     <div>
       <main>
         <header>
-          <p>SITE TITLE</p>
+          <p>島根大学祭マップ</p>
         </header>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
@@ -63,9 +63,7 @@ export default function Home() {
             ))}
           </Map>
           {selectedPlace && (
-            <div className="table-container">
-              {selectedPlace.description}
-            </div>
+            <div className="table-container">{selectedPlace.description}</div>
           )}
         </APIProvider>
       </main>
