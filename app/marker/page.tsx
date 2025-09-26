@@ -18,10 +18,11 @@ export default function Home() {
   const [currentPosition, setCurrentPosition] = useState<Coords>(null);
 
   // MapコンポーネントのonClickイベントハンドラ
-  const handleMapClick = (e: MapEvent) => {
+  const handleMapClick = (e: any) => {
     // イベントオブジェクトから緯度経度情報が取得できることを確認
-    if (e.detail.latLng) {
-      const coords = e.detail.latLng;
+    console.log(e.type);
+    if (e.type == "click") {
+      const coords: any = e.detail.latLng;
       setCurrentPosition(coords);
       console.log(
         `新しい座標: Lat ${coords.lat.toFixed(6)}, Lng ${coords.lng.toFixed(6)}`,

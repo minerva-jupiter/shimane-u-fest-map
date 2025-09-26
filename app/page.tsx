@@ -39,7 +39,7 @@ export default function Home() {
     }
   }, [search]);
 	*/
-  console.log(places);
+  // console.log(places);
   return (
     <div>
       <main>
