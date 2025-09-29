@@ -379,7 +379,7 @@ const places: Place[] = [
   // 以降、屋外企画を一つずつ分けて記述
   {
     id: 10,
-    position: { let: 35.485546, lng: 133.068026 },
+    position: { lat: 35.485546, lng: 133.068026 },
     title: "やきそばさっちゃん（屋外）",
     description: (
       <p>
@@ -405,7 +405,7 @@ const places: Place[] = [
   },
   {
     id: 12,
-    position: { lat: 35.485750, lng: 133.067987 },
+    position: { lat: 35.485712, lng: 133.067985 },
     title: "牛串屋デュース（屋外）",
     description: (
       <p>
@@ -470,7 +470,7 @@ const places: Place[] = [
   },
   {
     id: 17,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485912, lng: 133.067787 },
     title: "ヘアアレンジ（屋外）",
     description: (
       <p>
@@ -483,7 +483,7 @@ const places: Place[] = [
   },
   {
     id: 18,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486033, lng: 133.067735 },
     title: "肉巻きおにぎり（屋外）",
     description: (
       <p>
@@ -496,7 +496,7 @@ const places: Place[] = [
   },
   {
     id: 19,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486028, lng: 133.067672 },
     title: "ケバ部（屋外）",
     description: (
       <p>
@@ -509,7 +509,7 @@ const places: Place[] = [
   },
   {
     id: 20,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485831, lng: 133.067464 },
     title: "もぎたてスナフキンの森（屋外）",
     description: (
       <p>
@@ -522,7 +522,7 @@ const places: Place[] = [
   },
   {
     id: 21,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485767, lng: 133.067979 },
     title: "島大の駄菓子屋 綿菓子堂（屋外）",
     description: (
       <p>
@@ -535,7 +535,7 @@ const places: Place[] = [
   },
   {
     id: 22,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485820, lng: 133.067990 },
     title: "ざまく（屋外）",
     description: (
       <p>
@@ -548,7 +548,7 @@ const places: Place[] = [
   },
   {
     id: 23,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485856, lng: 133.067970 },
     title: "チョコバナナとジュース（屋外）",
     description: (
       <p>
@@ -561,7 +561,7 @@ const places: Place[] = [
   },
   {
     id: 24,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485907, lng: 133.067961 },
     title: "たませんとペットボトルドリンク（屋外）",
     description: (
       <p>
@@ -574,7 +574,7 @@ const places: Place[] = [
   },
   {
     id: 25,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.485970, lng: 133.067950 },
     title: "餃子パーティー！（屋外）",
     description: (
       <p>
@@ -587,7 +587,7 @@ const places: Place[] = [
   },
   {
     id: 26,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486119, lng: 133.067917 },
     title: "ダーツ部 ワッフル屋／ダーツ体験（屋外）",
     description: (
       <p>
@@ -600,7 +600,7 @@ const places: Place[] = [
   },
   {
     id: 27,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486194, lng: 133.067930 },
     title: "陶器の販売（屋外）",
     description: (
       <p>
@@ -613,7 +613,7 @@ const places: Place[] = [
   },
   {
     id: 28,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486212, lng: 133.068034 },
     title: "未来の先生が作るベビーカステラ屋さん（屋外）",
     description: (
       <p>
@@ -626,7 +626,7 @@ const places: Place[] = [
   },
   {
     id: 29,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486229, lng: 133.068137 },
     title: "献血バスコラボ！輸血パックジュース & アイス販売（屋外）",
     description: (
       <p>
@@ -639,7 +639,7 @@ const places: Place[] = [
   },
   {
     id: 30,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486320, lng: 133.067688 },
     title: "俺のチュロス（屋外）",
     description: (
       <p>
@@ -652,7 +652,7 @@ const places: Place[] = [
   },
   {
     id: 31,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486440, lng: 133.067666 },
     title: "理科教育専攻（屋外）",
     description: (
       <p>
@@ -665,7 +665,7 @@ const places: Place[] = [
   },
   {
     id: 32,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486547, lng: 133.067639 },
     title: "唐揚げ（屋外）",
     description: (
       <p>
@@ -678,7 +678,7 @@ const places: Place[] = [
   },
   {
     id: 33,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486733, lng: 133.067623 },
     title: "島大 bar へんにゅう（屋外）",
     description: (
       <p>
@@ -691,7 +691,7 @@ const places: Place[] = [
   },
   {
     id: 34,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486332, lng: 133.067884 },
     title: "水餃子・飲み物・お菓子（屋外）",
     description: (
       <p>
@@ -704,7 +704,7 @@ const places: Place[] = [
   },
   {
     id: 35,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486437, lng: 133.067860 },
     title: "ドリンク & オリジナルグッズ販売（屋外）",
     description: (
       <p>
@@ -717,7 +717,7 @@ const places: Place[] = [
   },
   {
     id: 36,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486528, lng: 133.067840 },
     title: "鳥、好きになりました。-島吹編-（屋外）",
     description: (
       <p>
@@ -730,7 +730,7 @@ const places: Place[] = [
   },
   {
     id: 37,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486614, lng: 133.067821 },
     title: "Tea&Chips（屋外）",
     description: (
       <p>
@@ -743,7 +743,7 @@ const places: Place[] = [
   },
   {
     id: 38,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486699, lng: 133.067801 },
     title: "ポップコーン屋さん（屋外）",
     description: (
       <p>
@@ -756,7 +756,7 @@ const places: Place[] = [
   },
   {
     id: 39,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486869, lng: 133.067597 },
     title: "香川FC（屋外）",
     description: (
       <p>
@@ -769,7 +769,7 @@ const places: Place[] = [
   },
   {
     id: 40,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486940, lng: 133.067578 },
     title: "ワークショップ & 作品販売（屋外）",
     description: (
       <p>
@@ -782,7 +782,7 @@ const places: Place[] = [
   },
   {
     id: 41,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.487088, lng: 133.067536 },
     title: "ベビーカステラとかき氷（屋外）",
     description: (
       <p>
@@ -795,7 +795,7 @@ const places: Place[] = [
   },
   {
     id: 42,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.487181, lng: 133.067518 },
     title: "フルーツアメ屋（屋外）",
     description: (
       <p>
@@ -808,7 +808,7 @@ const places: Place[] = [
   },
   {
     id: 43,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486800, lng: 133.067768 },
     title: "島根大学料理サークル ワッフル（屋外）",
     description: (
       <p>
@@ -821,7 +821,7 @@ const places: Place[] = [
   },
   {
     id: 44,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486905, lng: 133.067748 },
     title: "クレープ店（天文部）（屋外）",
     description: (
       <p>
@@ -834,7 +834,7 @@ const places: Place[] = [
   },
   {
     id: 45,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.486970, lng: 133.067737 },
     title: "ポップコーンの販売（屋外）",
     description: (
       <p>
@@ -847,7 +847,7 @@ const places: Place[] = [
   },
   {
     id: 46,
-    position: { lat: 0, lng: 0 },
+    position: { lat: 35.487037, lng: 133.067730 },
     title: "ワニ君の唐揚げ屋さん（屋外）",
     description: (
       <p>
