@@ -244,7 +244,7 @@ const places: Place[] = [
   },
   {
     id: 7,
-    position: { lat: 35.486748, lng: 133.067910 },
+    position: { lat: 35.486748, lng: 133.06791 },
     title: "法文学部棟",
     description: (
       <>
