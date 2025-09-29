@@ -244,7 +244,7 @@ const places: Place[] = [
   },
   {
     id: 7,
-    position: { lat: 35.486756, lng: 133.067905 },
+    position: { lat: 35.486748, lng: 133.067910 },
     title: "法文学部棟",
     description: (
       <>
@@ -455,7 +455,7 @@ const places: Place[] = [
   },
   {
     id: 16,
-    position: { lat: 35.485895, lng: 133.067793 },
+    position: { lat: 35.485858, lng: 133.067802 },
     title: "ベビーカステラ屋／shimasuno（屋外）",
     description: (
       <>
