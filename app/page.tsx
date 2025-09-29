@@ -11,6 +11,11 @@ const findPlaceById = (id: number): Place | undefined => {
 };
 */
 
+type Coords = {
+	lat :number;
+	lng :number;
+} | null;
+
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
   // ユーザーの現在地を保持する状態
