@@ -18,9 +18,7 @@ type Coords = {
 
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  // ユーザーの現在地を保持する状態
   const [userLocation, setUserLocation] = useState<Coords>(null);
-  // 緯度経度取得中の状態
   const [locationLoading, setLocationLoading] = useState(true);
   /*
   const searchParams = useSearchParams();
@@ -29,6 +27,13 @@ export default function Home() {
   const handleMarkerClick = (place: Place) => {
     setSelectedPlace(place);
   };
+    const handleMapClick = (e: any) => {
+      // マーカクリック(e.detail.placeIdがある)ではなく、地図自体のクリックであれば閉じる
+      // MapClickEventはe.detail.latLngを持つが、e.detail.placeIdを持たないことが多い
+      if (!e.detail.placeId) {
+        setSelectedPlace(null);
+      }
+    };
   /*
   useEffect(() => {
     if (search !== null) {
@@ -56,7 +61,6 @@ export default function Home() {
         (error) => {
           console.error("Geolocation Error:", error);
           setLocationLoading(false);
-          // エラー時もデフォルト位置に地図を表示するため、userLocationはnullのまま
         },
         { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 },
       );
@@ -77,6 +81,7 @@ export default function Home() {
             defaultZoom={17}
             gestureHandling={"greedy"}
             disableDefaultUI={true}
+			onClick={handleMapClick}
           >
             {places.map((place) => (
               <Marker
@@ -88,11 +93,7 @@ export default function Home() {
             {userLocation && (
               <Marker
                 position={userLocation}
-                // 現在地であることを示すためにカスタムアイコンを使用することを推奨
-                icon={{
-                  url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png", // 青いドットアイコン
-                  scaledSize: new window.google.maps.Size(40, 40),
-                }}
+				icon={"/blue-sercle.png"}
               />
             )}
           </Map>
@@ -105,7 +106,7 @@ export default function Home() {
         </APIProvider>
       </main>
       <footer>
-        <small>&copy; 2025 minerva_juppiter All Right Reserved</small>
+        <small>minerva_juppiter All Right Reserved</small>
       </footer>
     </div>
   );
