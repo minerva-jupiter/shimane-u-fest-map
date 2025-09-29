@@ -62,8 +62,7 @@ export default function Home() {
           {currentPosition ? (
             <p>
               **タップした座標:** <br />
-              Lat: **{currentPosition.lat.toFixed(6)}**, Lng: **
-              {currentPosition.lng.toFixed(6)}**
+			  lat: {currentPosition.lat.toFixed(6)}, lng: {currentPosition.lng.toFixed(6)}
             </p>
           ) : (
             <p>地図上の任意の場所をタップしてください。</p>
