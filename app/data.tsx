@@ -15,136 +15,136 @@ const places: Place[] = [
     title: "メインステージ",
     description: (
       <>
-          <h3>メインステージ | 10月12日(日)</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>時間</th>
-                <th>出演者</th>
-                <th>出演内容</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>9:30～10:10</td>
-                <td>島根大学お笑いサークル「あちゃらか」 vs ブーゲンビリア</td>
-                <td>あちゃらか3番勝負! vs ブーゲンビリア</td>
-              </tr>
-              <tr>
-                <td>10:30～11:00</td>
-                <td>ギター部</td>
-                <td>ギター部</td>
-              </tr>
-              <tr>
-                <td>11:15～11:35</td>
-                <td>Kpop dance circle</td>
-                <td>Kpop dance circle</td>
-              </tr>
-              <tr>
-                <td>11:50～12:00</td>
-                <td>島根大学ジャグリングサークル Kaleido</td>
-                <td>ジャグリングパフォーマンス</td>
-              </tr>
-              <tr>
-                <td>12:20～15:50</td>
-                <td>軽音楽部（選出9組）</td>
-                <td>軽音楽部ステージライブ</td>
-              </tr>
-              <tr>
-                <td>16:00～18:00</td>
-                <td>Pop’n Light Party</td>
-                <td>Pop’n Light Party ステージ</td>
-              </tr>
-            </tbody>
-          </table>
+        <h3>メインステージ | 10月12日(日)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>出演者</th>
+              <th>出演内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:30～10:10</td>
+              <td>島根大学お笑いサークル「あちゃらか」 vs ブーゲンビリア</td>
+              <td>あちゃらか3番勝負! vs ブーゲンビリア</td>
+            </tr>
+            <tr>
+              <td>10:30～11:00</td>
+              <td>ギター部</td>
+              <td>ギター部</td>
+            </tr>
+            <tr>
+              <td>11:15～11:35</td>
+              <td>Kpop dance circle</td>
+              <td>Kpop dance circle</td>
+            </tr>
+            <tr>
+              <td>11:50～12:00</td>
+              <td>島根大学ジャグリングサークル Kaleido</td>
+              <td>ジャグリングパフォーマンス</td>
+            </tr>
+            <tr>
+              <td>12:20～15:50</td>
+              <td>軽音楽部（選出9組）</td>
+              <td>軽音楽部ステージライブ</td>
+            </tr>
+            <tr>
+              <td>16:00～18:00</td>
+              <td>Pop’n Light Party</td>
+              <td>Pop’n Light Party ステージ</td>
+            </tr>
+          </tbody>
+        </table>
         <br />
-          <h3>メインステージ | 10月13日(月)</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>時間</th>
-                <th>出演者</th>
-                <th>出演内容</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>9:30～10:00</td>
-                <td>AM2:00, Telescope</td>
-                <td>コピーバンド</td>
-              </tr>
-              <tr>
-                <td>10:10～10:40</td>
-                <td>地域工学バンド</td>
-                <td>バンド演奏</td>
-              </tr>
-              <tr>
-                <td>10:55～11:25</td>
-                <td>島根大学吹奏楽部</td>
-                <td>しますいスペシャルステージ</td>
-              </tr>
-              <tr>
-                <td>11:40～12:20</td>
-                <td>島根大学お笑いサークル「あちゃらか」</td>
-                <td>あちゃらかネタライブ!!</td>
-              </tr>
-              <tr>
-                <td>12:30～13:10</td>
-                <td>Yin Youngs</td>
-                <td>HIPHOP LIVE!!</td>
-              </tr>
-              <tr>
-                <td>13:25～13:45</td>
-                <td>スナフキン</td>
-                <td>スナフキン アコステージ</td>
-              </tr>
-              <tr>
-                <td>14:05～14:40</td>
-                <td>島根県立大学石見神楽舞濱社中</td>
-                <td>塵輪</td>
-              </tr>
-              <tr>
-                <td>15:20～16:00</td>
-                <td>実行委員会</td>
-                <td>ビンゴ大会</td>
-              </tr>
-            </tbody>
-          </table>
+        <h3>メインステージ | 10月13日(月)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>時間</th>
+              <th>出演者</th>
+              <th>出演内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9:30～10:00</td>
+              <td>AM2:00, Telescope</td>
+              <td>コピーバンド</td>
+            </tr>
+            <tr>
+              <td>10:10～10:40</td>
+              <td>地域工学バンド</td>
+              <td>バンド演奏</td>
+            </tr>
+            <tr>
+              <td>10:55～11:25</td>
+              <td>島根大学吹奏楽部</td>
+              <td>しますいスペシャルステージ</td>
+            </tr>
+            <tr>
+              <td>11:40～12:20</td>
+              <td>島根大学お笑いサークル「あちゃらか」</td>
+              <td>あちゃらかネタライブ!!</td>
+            </tr>
+            <tr>
+              <td>12:30～13:10</td>
+              <td>Yin Youngs</td>
+              <td>HIPHOP LIVE!!</td>
+            </tr>
+            <tr>
+              <td>13:25～13:45</td>
+              <td>スナフキン</td>
+              <td>スナフキン アコステージ</td>
+            </tr>
+            <tr>
+              <td>14:05～14:40</td>
+              <td>島根県立大学石見神楽舞濱社中</td>
+              <td>塵輪</td>
+            </tr>
+            <tr>
+              <td>15:20～16:00</td>
+              <td>実行委員会</td>
+              <td>ビンゴ大会</td>
+            </tr>
+          </tbody>
+        </table>
       </>
     ),
   },
   {
     id: 3,
-    position: { lat: 35.487896, lng: 1330.67738 },
+    position: { lat: 35.487909, lng: 133.067738 },
     title: "屋内企画：大学会館 ライブ",
     description: (
       <>
-          <h3>ライブ</h3>
-          <h3>日時：</h3>
-          10月12日（日）9:30～18:00、10月13日（月・祝）9:30～16:00
-          <br />
-          <h3>出演：</h3>
-          <br />
-          <table>
-            <thead>
-              <tr>
-                <th>内容</th>
-                <th>出演／運営</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>軽音楽部 & Pop’n Light Party 合同ライブ</td>
-                <td>軽音楽部 & Pop’n Light Party</td>
-              </tr>
-            </tbody>
-          </table>
-          <h3>お茶席</h3>
-          <h3>日時：</h3>
-          10月12日（日）9:30～18:00、10月13日（月・祝）9:30～16:00
-          <br />
-          <h3>内容：</h3>
-          裏千家茶道部によるお菓子とお茶の提供（場所：FLAT）
+        <h3>ライブ</h3>
+        <h3>日時：</h3>
+        10月12日（日）9:30～18:00、10月13日（月・祝）9:30～16:00
+        <br />
+        <h3>出演：</h3>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>内容</th>
+              <th>出演／運営</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>軽音楽部 & Pop’n Light Party 合同ライブ</td>
+              <td>軽音楽部 & Pop’n Light Party</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>お茶席</h3>
+        <h3>日時：</h3>
+        10月12日（日）9:30～18:00、10月13日（月・祝）9:30～16:00
+        <br />
+        <h3>内容：</h3>
+        裏千家茶道部によるお菓子とお茶の提供（場所：FLAT）
       </>
     ),
   },
@@ -533,7 +533,7 @@ const places: Place[] = [
   },
   {
     id: 22,
-    position: { lat: 35.485820, lng: 133.067990 },
+    position: { lat: 35.48582, lng: 133.06799 },
     title: "ざまく（屋外）",
     description: (
       <>
@@ -546,7 +546,7 @@ const places: Place[] = [
   },
   {
     id: 23,
-    position: { lat: 35.485856, lng: 133.067970 },
+    position: { lat: 35.485856, lng: 133.06797 },
     title: "チョコバナナとジュース（屋外）",
     description: (
       <>
@@ -572,7 +572,7 @@ const places: Place[] = [
   },
   {
     id: 25,
-    position: { lat: 35.485970, lng: 133.067950 },
+    position: { lat: 35.48597, lng: 133.06795 },
     title: "餃子パーティー！（屋外）",
     description: (
       <>
@@ -598,7 +598,7 @@ const places: Place[] = [
   },
   {
     id: 27,
-    position: { lat: 35.486194, lng: 133.067930 },
+    position: { lat: 35.486194, lng: 133.06793 },
     title: "陶器の販売（屋外）",
     description: (
       <>
@@ -637,7 +637,7 @@ const places: Place[] = [
   },
   {
     id: 30,
-    position: { lat: 35.486320, lng: 133.067688 },
+    position: { lat: 35.48632, lng: 133.067688 },
     title: "俺のチュロス（屋外）",
     description: (
       <>
@@ -650,7 +650,7 @@ const places: Place[] = [
   },
   {
     id: 31,
-    position: { lat: 35.486440, lng: 133.067666 },
+    position: { lat: 35.48644, lng: 133.067666 },
     title: "理科教育専攻（屋外）",
     description: (
       <>
@@ -702,7 +702,7 @@ const places: Place[] = [
   },
   {
     id: 35,
-    position: { lat: 35.486437, lng: 133.067860 },
+    position: { lat: 35.486437, lng: 133.06786 },
     title: "ドリンク & オリジナルグッズ販売（屋外）",
     description: (
       <>
@@ -715,7 +715,7 @@ const places: Place[] = [
   },
   {
     id: 36,
-    position: { lat: 35.486528, lng: 133.067840 },
+    position: { lat: 35.486528, lng: 133.06784 },
     title: "鳥、好きになりました。-島吹編-（屋外）",
     description: (
       <>
@@ -767,7 +767,7 @@ const places: Place[] = [
   },
   {
     id: 40,
-    position: { lat: 35.486940, lng: 133.067578 },
+    position: { lat: 35.48694, lng: 133.067578 },
     title: "ワークショップ & 作品販売（屋外）",
     description: (
       <>
@@ -806,7 +806,7 @@ const places: Place[] = [
   },
   {
     id: 43,
-    position: { lat: 35.486800, lng: 133.067768 },
+    position: { lat: 35.4868, lng: 133.067768 },
     title: "島根大学料理サークル ワッフル（屋外）",
     description: (
       <>
@@ -832,7 +832,7 @@ const places: Place[] = [
   },
   {
     id: 45,
-    position: { lat: 35.486970, lng: 133.067737 },
+    position: { lat: 35.48697, lng: 133.067737 },
     title: "ポップコーンの販売（屋外）",
     description: (
       <>
@@ -845,7 +845,7 @@ const places: Place[] = [
   },
   {
     id: 46,
-    position: { lat: 35.487037, lng: 133.067730 },
+    position: { lat: 35.487037, lng: 133.06773 },
     title: "ワニ君の唐揚げ屋さん（屋外）",
     description: (
       <>

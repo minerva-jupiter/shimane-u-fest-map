@@ -4,12 +4,10 @@ import {
   APIProvider,
   Map,
   Marker,
-  InfoWindow,
 } from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
 import styles from "./page.module.css";
 //import { useSearchParams } from "next/navigation";
-import { connection } from "next/server";
 
 /*
 const findPlaceById = (id: number): Place | undefined => {
@@ -19,6 +17,10 @@ const findPlaceById = (id: number): Place | undefined => {
 
 export default function Home() {
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+  // ユーザーの現在地を保持する状態
+  const [userLocation, setUserLocation] = useState<Coords>(null);
+  // 緯度経度取得中の状態
+  const [locationLoading, setLocationLoading] = useState(true);
   /*
   const searchParams = useSearchParams();
   const search = searchParams.get("id");
@@ -40,6 +42,27 @@ export default function Home() {
   }, [search]);
 	*/
   // console.log(places);
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          });
+          setLocationLoading(false);
+        },
+        (error) => {
+          console.error("Geolocation Error:", error);
+          setLocationLoading(false);
+          // エラー時もデフォルト位置に地図を表示するため、userLocationはnullのまま
+        },
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+      );
+    } else {
+      setLocationLoading(false);
+    }
+  }, []);
   return (
     <div>
       <main>
@@ -61,9 +84,22 @@ export default function Home() {
                 onClick={() => handleMarkerClick(place)}
               />
             ))}
+{userLocation && (
+              <Marker
+                position={userLocation}
+                // 現在地であることを示すためにカスタムアイコンを使用することを推奨
+                icon={{
+                  url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png", // 青いドットアイコン
+                  scaledSize: new window.google.maps.Size(40, 40),
+                }}
+              />
+            )}
           </Map>
           {selectedPlace && (
-            <div className="table-container">{selectedPlace.description}</div>
+            <div className="table-container">
+			<h2>{selectedPlace.title}</h2>
+			{selectedPlace.description}
+			</div>
           )}
         </APIProvider>
       </main>
