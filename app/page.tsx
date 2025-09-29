@@ -1,10 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import {
-  APIProvider,
-  Map,
-  Marker,
-} from "@vis.gl/react-google-maps";
+import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
 import styles from "./page.module.css";
 //import { useSearchParams } from "next/navigation";
@@ -57,7 +53,7 @@ export default function Home() {
           setLocationLoading(false);
           // エラー時もデフォルト位置に地図を表示するため、userLocationはnullのまま
         },
-        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 },
       );
     } else {
       setLocationLoading(false);
@@ -84,7 +80,7 @@ export default function Home() {
                 onClick={() => handleMarkerClick(place)}
               />
             ))}
-{userLocation && (
+            {userLocation && (
               <Marker
                 position={userLocation}
                 // 現在地であることを示すためにカスタムアイコンを使用することを推奨
@@ -97,9 +93,9 @@ export default function Home() {
           </Map>
           {selectedPlace && (
             <div className="table-container">
-			<h2>{selectedPlace.title}</h2>
-			{selectedPlace.description}
-			</div>
+              <h2>{selectedPlace.title}</h2>
+              {selectedPlace.description}
+            </div>
           )}
         </APIProvider>
       </main>
