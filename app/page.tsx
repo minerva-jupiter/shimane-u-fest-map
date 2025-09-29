@@ -73,7 +73,7 @@ export default function Home() {
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
             style={{ width: "100vw", height: "calc(100svh - 80px)" }}
-            defaultCenter={{ lat: 35.486404, lng: 133.06863 }}
+            defaultCenter={{ lat: 35.4875, lng: 133.068315 }}
             defaultZoom={17}
             gestureHandling={"greedy"}
             disableDefaultUI={true}
