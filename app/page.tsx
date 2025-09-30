@@ -125,7 +125,9 @@ export default function Home() {
           {selectedPlace && (
             <div className="table-container">
               <h2>{selectedPlace.title}</h2>
-              {selectedPlace.description}
+              <div className="description-scroll">
+                {selectedPlace.description}
+              </div>
             </div>
           )}
         </APIProvider>
