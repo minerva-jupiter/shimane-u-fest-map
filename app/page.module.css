@@ -1,3 +1,24 @@
+/* app/page.module.css */
+.customInfoWindow {
+  /* InfoWindowの最大幅を設定し、コンテンツが広がるようにする */
+  max-width: 450px !important;
+
+  /* その他、必要に応じてスタイルを調整 */
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #333;
+}
+
+.customInfoWindow h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.customInfoWindow p {
+  margin: 0;
+  font-size: 1rem;
+}
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);

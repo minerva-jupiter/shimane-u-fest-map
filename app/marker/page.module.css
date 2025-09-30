@@ -1,0 +1,31 @@
+/* app/page.module.css */
+
+.mapContainer {
+  width: 100vw;
+  height: 85vh;
+  position: relative;
+}
+
+.footer {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.coordinateDisplay {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.coordinateDisplay p {
+  margin: 0;
+}
