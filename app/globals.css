@@ -124,7 +124,18 @@ a {
 
 .table-container th:first-child,
 .table-container td:first-child {
-  width: 115px;
+  max-width: 100px;
+  min-width: 70px;
+}
+
+.table-container th:nth-child(2),
+.table-container td:nth-child(2) {
+  min-width: 140px;
+}
+
+.table-container .mainStage th:first-child,
+.table-container .mainStage td:first-child {
+  width: 130px;
 }
 
 .table-container tr:nth-child(even) {

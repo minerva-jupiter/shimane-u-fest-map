@@ -16,7 +16,7 @@ const places: Place[] = [
     description: (
       <>
         <h3>10/12</h3>
-        <table>
+        <table className="mainStage">
           <thead>
             <tr>
               <th>時間</th>
@@ -59,7 +59,7 @@ const places: Place[] = [
         </table>
         <br />
         <h3>10/13</h3>
-        <table>
+        <table className="mainStage">
           <thead>
             <tr>
               <th>時間</th>
