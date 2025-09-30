@@ -73,9 +73,10 @@ a {
 .table-container h2 {
   font-weight: 700;
   font-size: 1.1rem;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #888;
+  padding: 2px 4px;
   margin-bottom: 6px;
+  background: linear-gradient(to right, #000 0%, #444 65%, #fff 98%);
+  color: #fff;
 }
 
 .table-container h3 {
