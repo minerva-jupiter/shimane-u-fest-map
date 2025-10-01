@@ -7,7 +7,6 @@ import {
   useApiIsLoaded,
 } from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
-import styles from "./page.module.css";
 //import { useSearchParams } from "next/navigation";
 
 /*
@@ -22,13 +21,13 @@ type Coords = {
 } | null;
 
 function markerLabel(text: string) {
-  const labelIncludeStyle = {
-    color: "black",
-    fontSize: "15px",
-    fontWeight: "500",
+  return {
     text: text,
+    color: "#000",
+    fontSize: "0.8rem",
+    fontWeight: "500",
+    fontFamily: "Noto Sans JP, sans-serif",
   };
-  return labelIncludeStyle;
 }
 
 export default function Home() {
@@ -93,11 +92,11 @@ export default function Home() {
     <div>
       <main>
         <header>
-          <p>島根大学祭マップ</p>
+          <p>島根大学 松江キャンパス 学園祭マップ 2025</p>
         </header>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
-            style={{ width: "100vw", height: "calc(100svh - 80px)" }}
+            style={{ width: "100vw", height: "calc(100svh - 75px)" }}
             defaultCenter={{ lat: 35.4875, lng: 133.068315 }}
             defaultZoom={17}
             gestureHandling={"greedy"}
@@ -110,7 +109,7 @@ export default function Home() {
                 key={place.id}
                 position={place.position}
                 onClick={() => handleMarkerClick(place)}
-                label={currentZoom > 20 ? markerLabel(place.title) : undefined}
+                label={currentZoom > 19 ? markerLabel(place.title) : undefined}
               />
             ))}
             {userLocation && isApiLoaded && (
