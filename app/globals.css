@@ -78,14 +78,16 @@ a {
   margin-bottom: 3px;
 }
 
-.table-container h3.time,
-.table-container h3.op {
+.table-container h3.op,
+.table-container h3.area,
+.table-container h3.time {
   position: relative;
   padding-left: 38px;
 }
 
-.table-container h3.time::before,
-.table-container h3.op::before {
+.table-container h3.op::before,
+.table-container h3.area::before,
+.table-container h3.time::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -96,12 +98,16 @@ a {
   border: #999 1px solid;
 }
 
-.table-container h3.time::before {
-  content: "日時 ";
-}
-
 .table-container h3.op::before {
   content: "運営 ";
+}
+
+.table-container h3.area::before {
+  content: "場所 ";
+}
+
+.table-container h3.time::before {
+  content: "日時 ";
 }
 
 .table-container p {
