@@ -92,7 +92,7 @@ export default function Home() {
     <div>
       <main>
         <header>
-          <p>島根大学祭マップ</p>
+          <p>島根大学 松江キャンパス 学園祭マップ 2025</p>
         </header>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
