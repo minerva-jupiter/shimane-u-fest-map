@@ -65,7 +65,7 @@ a {
 
 .table-container h2 {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   padding: 2px 4px;
   margin-bottom: 6px;
   background: linear-gradient(to right, #000 0%, #444 65%, #fff 98%);
@@ -74,7 +74,7 @@ a {
 
 .table-container h3 {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 3px;
 }
 
