@@ -7,7 +7,6 @@ import {
   useApiIsLoaded,
 } from "@vis.gl/react-google-maps";
 import places, { Place } from "./data";
-import styles from "./page.module.css";
 //import { useSearchParams } from "next/navigation";
 
 /*
@@ -22,13 +21,13 @@ type Coords = {
 } | null;
 
 function markerLabel(text: string) {
-  const labelIncludeStyle = {
-    color: "black",
-    fontSize: "15px",
-    fontWeight: "500",
+  return {
     text: text,
+    color: "#000",
+    fontSize: "0.8rem",
+    fontWeight: "500",
+    fontFamily: "Noto Sans JP, sans-serif",
   };
-  return labelIncludeStyle;
 }
 
 export default function Home() {
@@ -110,7 +109,7 @@ export default function Home() {
                 key={place.id}
                 position={place.position}
                 onClick={() => handleMarkerClick(place)}
-                label={currentZoom > 20 ? markerLabel(place.title) : undefined}
+                label={currentZoom > 19 ? markerLabel(place.title) : undefined}
               />
             ))}
             {userLocation && isApiLoaded && (
