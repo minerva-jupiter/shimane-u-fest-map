@@ -1,3 +1,9 @@
+# 【非公式】島根大学祭オンラインマップ Shimane-u-fest-map
+島根大学祭の非公式オンラインマップを公開しました。
+URLは https://shimane-u-fest-map.pages.dev
+模擬店やイベント、ステージのタイムテーブルなどを確認できるようになっています。
+※非公式マップのため、情報に誤りがある場合があります。間違いを見つけたらissueを立てるなり、連絡するなりしてください。
+
 # for developers
 - launch pull request before push (even push dev)
 - use dev branch for development
