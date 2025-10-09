@@ -377,12 +377,12 @@ const places: Place[] = [
               <th>内容</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody>{/*
             <tr>
               <td>玄関ホール</td>
               <td>10/12: 10:00～18:00</td>
               <td>化学と遊ぼう (物質化学科) </td>
-            </tr>
+            </tr>*/}
             <tr>
               <td>数学第1講義室</td>
               <td>10/12: 10:00～15:00<br />10/13: 10:00～15:00</td>
@@ -958,7 +958,7 @@ const places: Place[] = [
   {
     id: 55,
     position: { lat: 35.486905, lng: 133.067748 },
-    title: "クレープ店 (天文部) ",
+    title: "クレープ店",
     description: (
       <>
         <h3 className="op">天文部</h3>
