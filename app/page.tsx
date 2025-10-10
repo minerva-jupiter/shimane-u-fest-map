@@ -107,16 +107,10 @@ export default function Home() {
           <p>島大松江 学祭マップ 2025</p>
         </header>
 		<div>
-		  <input
-		    type="text"
-		    placeholder="イベント名や説明で検索..."
-		    value={searchTerm}
-		    onChange={(e) => setSearchTerm(e.target.value)}
-		  />
 		</div>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
-            style={{ width: "100vw", height: "calc(100svh - 75px)" }}
+            style={{ width: "100vw", height: "calc(100svh - 100px)" }}
             defaultCenter={{ lat: 35.4875, lng: 133.068315 }}
             defaultZoom={17}
             gestureHandling={"greedy"}
@@ -154,6 +148,8 @@ export default function Home() {
       </main>
       <footer>
         <small>
+          <input type="text" placeholder="イベント名や説明で検索..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+          <br />
           <button className="about-link" onClick={() => setShowAbout(true)}>
             About
           </button>
