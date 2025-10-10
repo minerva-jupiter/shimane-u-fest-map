@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import {
   APIProvider,
   Map,
@@ -36,6 +36,7 @@ export default function Home() {
   const [locationLoading, setLocationLoading] = useState(true);
   const [currentZoom, setCurrentZoom] = useState(17);
   const isApiLoaded = useApiIsLoaded();
+  const [searchTerm, setSearchTerm] = useState("");
   /*
   const searchParams = useSearchParams();
   const search = searchParams.get("id");
@@ -44,8 +45,6 @@ export default function Home() {
     setSelectedPlace(place);
   };
   const handleMapClick = (e: any) => {
-    // マーカクリック(e.detail.placeIdがある)ではなく、地図自体のクリックであれば閉じる
-    // MapClickEventはe.detail.latLngを持つが、e.detail.placeIdを持たないことが多い
     if (!e.detail.placeId) {
       setSelectedPlace(null);
     }
@@ -53,6 +52,19 @@ export default function Home() {
   const handleZoomChange = (e: any) => {
     setCurrentZoom(e.detail.zoom);
   };
+
+  const filteredPlaces = useMemo(() => {
+    if (!searchTerm) {
+      return places;
+    }
+    const lowerCaseSearch = searchTerm.toLowerCase();
+    return places.filter(
+      (place) =>
+        place.title.toLowerCase().includes(lowerCaseSearch) ||
+        (typeof place.description === "string" &&
+          place.description.toLowerCase().includes(lowerCaseSearch)),
+    );
+  }, [searchTerm]);
   /*
   useEffect(() => {
     if (search !== null) {
@@ -94,6 +106,14 @@ export default function Home() {
         <header>
           <p>島大松江 学祭マップ 2025</p>
         </header>
+		<div>
+		  <input
+		    type="text"
+		    placeholder="イベント名や説明で検索..."
+		    value={searchTerm}
+		    onChange={(e) => setSearchTerm(e.target.value)}
+		  />
+		</div>
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}>
           <Map
             style={{ width: "100vw", height: "calc(100svh - 75px)" }}
@@ -104,7 +124,7 @@ export default function Home() {
             onClick={handleMapClick}
             onZoomChanged={handleZoomChange}
           >
-            {places.map((place) => (
+            {filteredPlaces.map((place) => (
               <Marker
                 key={place.id}
                 position={place.position}
@@ -134,10 +154,7 @@ export default function Home() {
       </main>
       <footer>
         <small>
-          <button
-            className="about-link"
-            onClick={() => setShowAbout(true)}
-          >
+          <button className="about-link" onClick={() => setShowAbout(true)}>
             About
           </button>
           &copy; minerva_juppiter All Right Reserved
@@ -147,10 +164,29 @@ export default function Home() {
         <div className="floating-modal">
           <div className="about">このサイトについて・免責事項</div>
           <div>
-            <p>1. 当サイトは非公式のマップであり，公式サイト，実行委員会，その他一切の関係団体とは関係ございません。</p>
-            <p>2. 当サイトに掲載する情報の正確性，完全性，最新性について，いかなる保証も行うものではありません。</p>
-            <p>3. 当サイトの利用により生じた損害または不利益について，当サイト運営者は一切の責任を負わないものとします。</p>
-            <p>4. 不具合・情報の誤り等がありましたら <a href="https://github.com/minerva-jupiter/shimane-u-fest-map" target="_blank" rel="noopener noreferrer">開発リポジトリ</a> でissueを作成していただけますと幸いです。</p>
+            <p>
+              1.
+              当サイトは非公式のマップであり，公式サイト，実行委員会，その他一切の関係団体とは関係ございません。
+            </p>
+            <p>
+              2.
+              当サイトに掲載する情報の正確性，完全性，最新性について，いかなる保証も行うものではありません。
+            </p>
+            <p>
+              3.
+              当サイトの利用により生じた損害または不利益について，当サイト運営者は一切の責任を負わないものとします。
+            </p>
+            <p>
+              4. 不具合・情報の誤り等がありましたら{" "}
+              <a
+                href="https://github.com/minerva-jupiter/shimane-u-fest-map"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                開発リポジトリ
+              </a>{" "}
+              でissueを作成していただけますと幸いです。
+            </p>
           </div>
           <button
             className="floating-modal-close"
